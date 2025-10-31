@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+header, section, article, footer, nav, h1 {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+    background-color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#second {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+}
+
+#second article:nth-child(-n+3) {
+    grid-column: 1;
+    min-height: 150px;
+}
+
+#second article:last-child {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    height: auto;
+}
+
+#first, #third, #fourth, #sixth {
+    height: 200px;
+}
+
+#fifth {
+    display: flex;
+    justify-content: space-around;
+}
+
+#fifth article {
+    width: 30%;
+    height: 300px;
+}
+
+footer {
+    height: 60px;
+    text-align: left;
+}
